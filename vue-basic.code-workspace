@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnPaste": true
+  },
+  "jshint.options": {
+    "esversion":6
+  },
+  "eslint.codeAction.disableRuleComment": {}
+}
