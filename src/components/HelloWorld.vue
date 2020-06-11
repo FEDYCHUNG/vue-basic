@@ -1,15 +1,32 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <alert>
+    <alert mode="primary">
       First Alert
     </alert>
-    <alert>
+    <alert mode="danger">
       Second Alert
     </alert>
-    <alert>
-      Third Alert
+    <alert mode="success">
+      Last Alert
     </alert>
+
+    <div>
+      <input
+        type="text"
+        v-model="lastName"
+        placeholder="Your nice name ?"
+      /><br />
+      <p>Welcome, {{ lastName }}</p>
+    </div>
+
+    <button @click="ClickedMe">Click Me</button>
+    <input
+      type="text"
+      @keyup.enter="doSomething"
+      placeholder="Please write your code"
+    />
+    <br />
     <button-counter></button-counter>
   </div>
 </template>
@@ -19,6 +36,19 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String
+  },
+  data() {
+    return {
+      lastName: "Ali"
+    };
+  },
+  methods: {
+    ClickedMe: function() {
+      console.log("You click on button");
+    },
+    doSomething() {
+      console.log("Coupon Applied");
+    }
   }
 };
 </script>

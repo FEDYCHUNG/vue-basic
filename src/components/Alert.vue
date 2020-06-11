@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="alert alert-primary" role="alert">
+    <div class="alert" :class="mode" role="alert">
       <slot></slot>
     </div>
   </div>
@@ -8,16 +8,29 @@
 
 <script>
 export default {
-  name: "Alert"
+  name: "Alert",
+  props: ["mode"]
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.alert-primary {
-  color: #004085;
-  background-color: #cce5ff;
-  border-color: #b8daff;
+.primary {
+  color: #fff;
+  background-color: #032141;
+  border-color: #032141;
+}
+
+.success {
+  color: #fff;
+  background-color: #034b03;
+  border-color: #034b03;
+}
+
+.danger {
+  color: #fff;
+  background-color: #e4270f;
+  border-color: #e4270f;
 }
 
 .alert {
