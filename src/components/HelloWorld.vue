@@ -27,6 +27,11 @@
       placeholder="Please write your code"
     />
     <br />
+
+    <h3>Using Loop</h3>
+    <ul>
+      <li v-for="person in students" :key="person.id">{{ person }}</li>
+    </ul>
     <button-counter></button-counter>
   </div>
 </template>
@@ -39,7 +44,8 @@ export default {
   },
   data() {
     return {
-      lastName: "Ali"
+      lastName: "Ali",
+      students: ["Ali", "Jan", "Willian", "Khan"]
     };
   },
   methods: {
